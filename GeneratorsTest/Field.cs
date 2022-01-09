@@ -11,5 +11,12 @@ namespace GeneratorsTest
     {
         public T? Value { get; set; }
         public int Fa { get; set; }
+
+        public static Field<T> From(T source, int fieldAccess) {
+            return new Field<T> {
+                Value = source,
+                Fa= fieldAccess,
+            };
+        }
     }
 }
